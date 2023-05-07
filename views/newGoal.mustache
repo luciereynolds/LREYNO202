@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+{{>header}}
+</head>
+<body class="h-100">
+<div class="text-center">
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+    <div class="col-10 col-md-8 col-lg-6">
+	<!-- Form -->
+    <form method="post" role="form" action="/addgoal" class="form-example">
+    <h2>Write a new entry</h2>
+    <div class="form-group">
+        <label for="userID">User ID</label>
+        <input type="text" class="form-control" id="userID" name="userID" placeholder="Enter userID" required>
+    </div>
+    <div class="form-group">
+        <p> Select goal type </p>
+        <input type="radio" id="Fitness" name="goalType" value="Fitness">
+        <label for "Fitness"> Fitness </label>
+        <br>
+        <input type="radio" id="Sleep" name="goalType" value="Sleep">
+        <label for "Sleep"> Sleep </label>
+        <br>
+        <input type="radio" id="Health" name="goalType" value="Health">
+        <label for "Health"> Health </label>
+        <br>
+    </div>
+    <div class="form-group">
+        <label for="goalName">Goal Name</label>
+        <input type="text" class="form-control" id="goalName" name="goalName" placeholder="Enter goal name" required>
+    </div>
+    <div class="form-group">
+        <label for="goalDate">Goal Date</label>
+        <input type="text" class="form-control" id="goalDate" name="goalDate" placeholder="yyyy/mm/dd" required>
+    </div>
+    <div class="form-group">
+        <p> Goal complete? </p>
+        <input type="radio" id="n" name="complete" value="n">
+        <label for "n"> No </label>
+        <br>
+        <input type="radio" id="y" name="complete" value="y">
+        <label for "y"> Yes </label>
+        <br>
+    </div>
+    <br>
+    <input type="submit" value="Add New Goal" class="btn btn-primary btn-customized">
+    </div>
+    </div>
+    </div>
+    </form>
+</body
+</html>

@@ -1,0 +1,85 @@
+<html>
+<head>
+    {{>header}}
+</head>
+
+<body class="d-flex h-100 text-center text-bg-light">
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+  <header class="mb-auto">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <h3>{{title}}</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/general">Health Info</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Goals
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    <li><a class="dropdown-item" href="/allGoals">All Goals</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/sleep">Sleep</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/fitness">Fitness</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/health">Health</a></li>
+                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="/achievements">Achievements</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Account
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    {{^user}}
+                    <li><a id="login" class="dropdown-item" href="/register">Register</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a id="login" class="dropdown-item" href="/login">Login</a></li>
+                    {{/user}}
+                    {{#user}}
+                    <li><a id="logout" class="dropdown-item" href="/logout">Sign Out</a></li>
+                    {{/user}}
+                  </ul>
+                </li>
+            </div>
+          </div>
+        </nav>
+  </header>
+
+  <main class="px-3">
+    <h1>About our application.</h1>
+    <p class="lead">
+    We believe that everyone deserves access to the tools and information they need to live their healthiest life. 
+    That's why we've created an app that makes it easy for you to track your fitness, health, and sleep goals, and 
+    provides you with up-to-date and accurate health information at your fingertips. Our team of experts is passionate 
+    about helping people achieve their health goals, and we're committed to providing you with personalized recommendations 
+    and support every step of the way. Whether you're just starting your health journey or you're looking for new ways to 
+    stay motivated, we're here to help. Join us today and start taking control of your health!
+    </p>
+    <p class="lead">
+      
+    </p>
+  </main>
+
+  <footer class="mt-auto text-white-50">
+    <p> </p>
+  </footer>
+</div>
+
+</body>
+</html>

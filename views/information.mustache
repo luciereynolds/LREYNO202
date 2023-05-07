@@ -1,0 +1,180 @@
+<html>
+<head>
+    {{>header}}
+</head>
+
+<div class="cover-container p-3 mx-auto flex-column">
+<header class="mb-auto">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <h3>{{title}}</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="/general">Health Info</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Goals
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="static">
+				  	<li><a class="dropdown-item" href="/allGoals">All Goals</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/sleep">Sleep</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/fitness">Fitness</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/health">Health</a></li>
+                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="/achievements">Achievements</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Account
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    {{^user}}
+                    <li><a id="login" class="dropdown-item" href="/register">Register</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a id="login" class="dropdown-item" href="/login">Login</a></li>
+                    {{/user}}
+                    {{#user}}
+                    <li><a id="logout" class="dropdown-item" href="/logout">Sign Out</a></li>
+                    {{/user}}
+                  </ul>
+                </li>
+            </div>
+          </div>
+        </nav>
+  </header>
+
+<body class="d-flex h-100 text-left text-bg-light w-100">
+<div class="bd-example h-100">
+          <nav id="navbar-example2" class="navbar bg-body-tertiary px-3">
+            <a class="navbar-brand" href="#">Health Information</a>
+            <ul class="nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading1">Sleep</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading2">Fitness</a>
+              </li>
+			  <li class="nav-item">
+                <a class="nav-link" href="#scrollspyHeading3">Health</a>
+              </li>
+            </ul>
+          </nav>
+        <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example position-relative mt-2 overflow-auto h-100" tabindex="0">
+            <h4 id="scrollspyHeading1">Sleep</h4>
+			 <p>
+			  Getting adequate sleep is critical for overall health and well-being. Sleep plays a crucial role 
+			  in several important functions of the body, including repairing and regenerating cells and tissues, 
+			  consolidating memories, and regulating mood and emotions. Chronic sleep deprivation can have serious 
+			  consequences for physical and mental health.
+			  </p>
+			  <p>
+			  One of the most important roles of sleep is to allow the body to repair and regenerate. During sleep, 
+			  the body releases hormones that stimulate tissue growth and repair. This is why people who consistently 
+			  get enough restful sleep tend to have healthier skin, hair, and nails, and recover more quickly from 
+			  injuries or illnesses.
+			  </p>
+			  <p>
+			  Sleep is also essential for cognitive function and memory consolidation. During sleep, the brain 
+			  processes and consolidates memories, allowing us to retain information and learn new things. Studies 
+			  have shown that people who get enough quality sleep are better able to concentrate, solve problems, 
+			  and make decisions.
+			  </p>
+			  <p>
+			  In addition to physical and cognitive benefits, sleep also plays a critical role in emotional well-being. 
+			  Lack of sleep has been linked to an increased risk of depression, anxiety, and other mood disorders. Sleep 
+			  helps regulate the levels of neurotransmitters in the brain that control mood and emotions, so getting 
+			  enough sleep is essential for maintaining emotional stability and balance.
+			  </p>
+			  <p>
+			  Overall, the importance of sleep for good health cannot be overstated. By making sleep a priority and ensuring 
+			  that you are getting enough restful sleep each night, you can improve your physical health, cognitive function, 
+			  and emotional well-being.
+			  </p>
+            <h4 id="scrollspyHeading2">Fitness</h4>
+			<p>
+			  Fitness and exercise are essential for good health and well-being. Regular physical activity has numerous benefits 
+			  for the body and mind, including improving cardiovascular health, increasing muscle strength and endurance, and 
+			  enhancing flexibility and balance. Exercise has also been linked to a reduced risk of chronic health conditions such 
+			  as obesity, type 2 diabetes, and certain types of cancer.
+			  </p>
+			  <p>
+			  One of the most significant benefits of exercise is improved cardiovascular health. Regular physical activity can 
+			  help reduce blood pressure, lower cholesterol levels, and decrease the risk of heart disease and stroke. Exercise 
+			  also helps strengthen the heart and lungs, making it easier to perform everyday activities.
+			  </p>
+			  <p>
+			  In addition to physical benefits, exercise has a positive impact on mental health. Exercise has been shown to reduce 
+			  stress and anxiety, improve mood, and increase self-esteem. Regular physical activity can also help alleviate 
+			  symptoms of depression and other mental health conditions.
+			  </p>
+			  <p>
+			  Another benefit of exercise is increased muscle strength and endurance. Regular strength training exercises can help 
+			  build muscle mass, improve bone density, and increase metabolic rate. This can lead to improved overall physical 
+			  performance and decreased risk of injury.
+			  </p>
+			  <p>
+			  It cannot be emphasized enough how crucial fitness and exercise are for maintaining good health. Regular physical 
+			  activity can enhance both physical and mental well-being, leading to an overall improvement in quality of life. Whether 
+			  you prefer participating in structured exercise programs or outdoor activities like hiking or cycling, there are numerous 
+			  ways to incorporate exercise into your daily routine and experience its benefits. By making exercise a regular part of 
+			  your life, you can boost your physical strength and endurance, reduce your risk of chronic health conditions, and 
+			  experience an increase in your energy and self-confidence.
+			  </p>
+            <h4 id="scrollspyHeading3">Health</h4>
+			<p>
+			  Healthy eating is an essential component of good health and well-being. The food we consume provides our bodies with 
+			  the necessary nutrients, vitamins, and minerals needed to function properly. A balanced and nutritious diet can help 
+			  prevent chronic health conditions such as heart disease, diabetes, and certain types of cancer.
+			  </p>
+			  <p>
+			  Eating a diet rich in fruits, vegetables, whole grains, lean protein, and healthy fats can provide the body with the 
+			  nutrients it needs to function optimally. These foods are often high in fiber, vitamins, and minerals that help boost 
+			  the immune system, regulate blood sugar levels, and reduce inflammation.
+			  </p>
+			  <p>
+			  On the other hand, consuming a diet that is high in processed and fast foods can have negative effects on our health. 
+			  These foods are often high in calories, sugar, and unhealthy fats, which can lead to weight gain and an increased risk 
+			  of chronic health conditions.
+			  </p>
+			  <p>
+			  In addition to physical benefits, healthy eating can also have a positive impact on mental health. A diet that is high 
+			  in processed and fast foods has been linked to an increased risk of depression, anxiety, and other mood disorders. On 
+			  the other hand, a diet that is rich in whole foods such as fruits, vegetables, and whole grains has been shown to 
+			  reduce symptoms of depression and anxiety.
+			  </p>
+			  <p>
+			  Tracking your health can be an effective way to monitor your progress towards achieving your health goals. By keeping 
+			  a record of your physical activity, food intake, and other health-related behaviors, you can gain insight into your 
+			  habits and identify areas where improvements can be made. This can help you make more informed decisions about your 
+			  health and develop a plan of action to achieve your goals.
+			  </p>
+			  <p>
+			  Additionally, tracking your health can help you stay motivated and accountable. Seeing progress over time can be a powerful 
+			  motivator, and can help you stay on track towards achieving your goals. Whether you are looking to lose weight, improve your 
+			  fitness level, or manage a chronic health condition, tracking your health can be a valuable tool in achieving success. Try 
+			  our application today and start tracking your health, it's easier than ever to stay on top of your health 
+			  and achieve your goals!
+			  </p>
+          </div>
+        </div>
+</div>
+
+</body>
+</html>

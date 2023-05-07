@@ -1,0 +1,104 @@
+<html>
+<head>
+    {{>header}}
+</head>
+
+<body class="text-bg-light">
+<div class="cover-container p-3 mx-auto flex-column">
+<header class="mb-auto">
+
+<!-- Navigation bar -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <h3>{{title}}</h3>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/general">Health Info</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Goals
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    <li><a class="dropdown-item" href="/allGoals">All Goals</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/sleep">Sleep</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/fitness">Fitness</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="/health">Health</a></li>
+                  </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="/achievements">Achievements</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle show" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="true">
+                    Account
+                  </a>
+                  <ul class="dropdown-menu" data-bs-popper="static">
+                    {{^user}}
+                    <li><a id="login" class="dropdown-item" href="/register">Register</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a id="login" class="dropdown-item" href="/login">Login</a></li>
+                    {{/user}}
+                    {{#user}}
+                    <li><a id="logout" class="dropdown-item" href="/logout">Sign Out</a></li>
+                    {{/user}}
+                  </ul>
+                </li>
+            </div>
+          </div>
+        </nav>
+  </header>
+  
+<!-- sleep goals -->
+<h1 class="text-center">Sleep Goals</h1>
+<br>
+<p class="text-center"> Shows all goals in the Fitness category that have not been completed</p>
+<br>
+<div class="text-center">
+<a href="/addgoal" class="btn btn-primary">
+Add New Goal
+</a>
+<a href="/modifygoal" class="btn btn-primary">
+Modify Goal
+</a>
+<a href="/deletegoal" class="btn btn-danger">
+Delete Goal
+</a>
+</div>
+<br>
+{{#entries}}
+<div class="card">
+  <div class="card-body">
+    <h4 class="card-title">{{goalType}}</h4>
+    <p class="card-text">
+      {{goalName}}
+     </p>
+     <p>
+     Goal ID: 
+     {{_id}}
+     </p>
+<div class="card-footer">
+UserID: {{userID}}, to be completed by: {{goalDate}}
+</div>
+</div>
+{{/entries}}
+<br>
+{{^entries}}
+No entries yet.
+{{/entries}}
+</body>
+</html>
