@@ -12,12 +12,15 @@ The features implemented are:
 - a homepage
 - an about page
 - a log in and register function.
+
 once logged in, users can access:
+
 - a health information page
 - an achievements page which shows completed health goals
 - an all goals page
 - a fitness goals page
 - a health goals page
 - a sleep goals page
+
 Users can also log out.
 on the goals pages, users have the option to add a new goal, modify an existing goal or delete a goal.
